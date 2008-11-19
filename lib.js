@@ -15,7 +15,9 @@ function ajaxload(url){
     var x=new(this.ActiveXObject?ActiveXObject:XMLHttpRequest)('Microsoft.XMLHTTP');
     x.open('GET', url, 1);
     x.onreadystatechange=function(){
-      x.readyState>3&&callback(x.responseText,x):0
+      if(x.readyState>3){
+        callback(x.responseText,x)
+      }
     };
     x.send(d)
   }
