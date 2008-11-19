@@ -19,6 +19,6 @@ function ajaxload(url){
         callback(x.responseText,x)
       }
     };
-    x.send(d)
+    x.send(null)
   }
 }
