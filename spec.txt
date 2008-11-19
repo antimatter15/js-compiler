@@ -1,0 +1,29 @@
+
+alert(ajaxload("moo.txt"))
+include("moo.js");
+
+
+
+include("moo.js")(function(include_0948394){
+  ajaxload("moo.txt")(function(ajaxload_024845){
+    alert(ajaxload_024845)
+  })
+})
+
+
+HOW?
+
+include("moo.js");
+string search for
+include(
+
+substr whole document starting with include(
+run find();
+
+generate return name (name) + (random)
+
+ends with index for end, append code
+
+include("moo.js")(function(include_454945){
+
+add closing }) to end of block
