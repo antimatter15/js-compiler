@@ -14,6 +14,9 @@ function compile(str){ //does not work
 }
 
 function compilefn(str, fn){  
+
+  str = ";" + str;
+  
   var fdex = str.indexOf(fn+"(")
   
   var edex = find(str.substr(fdex)) + 1;
@@ -22,6 +25,7 @@ function compilefn(str, fn){
   
   var outvar = fn + "_" + Math.floor(Math.random()*999999+99999);
   
+  
   var ldex = str.substr(0, fdex).length - str.substr(0,fdex).split("").reverse().join("").indexOf(";")
   
   var start = str.substr(0, fdex).substr(0, ldex);
@@ -29,8 +33,9 @@ function compilefn(str, fn){
   var code = str.substr(0,fdex).substr(ldex);
   
   
-  var newstr = start+startend+"(function("+outvar+"){"+code+outvar+str.substr(fdex+edex)+"})"
+  var newstr = start+startend+"(function("+outvar+"){\n"+code+outvar+str.substr(fdex+edex)+"\n})"
   
-  console.log(newstr)
+  //console.log(newstr)
+  return newstr;
   
 }
